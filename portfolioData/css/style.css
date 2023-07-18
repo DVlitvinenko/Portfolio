@@ -1,0 +1,343 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  margin: 0
+}
+
+main {
+  display: block
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+a {
+  background-color: transparent
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+
+b,
+strong {
+  font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+small {
+  font-size: 80%
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sub {
+  bottom: -.25em
+}
+
+sup {
+  top: -.5em
+}
+
+img {
+  border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
+}
+
+button,
+input {
+  overflow: visible
+}
+
+button,
+select {
+  text-transform: none
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText
+}
+
+fieldset {
+  padding: .35em .75em .625em
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal
+}
+
+progress {
+  vertical-align: baseline
+}
+
+textarea {
+  overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+}
+
+details {
+  display: block
+}
+
+summary {
+  display: list-item
+}
+
+template {
+  display: none
+}
+
+[hidden] {
+  display: none
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 1px solid red;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+}
+
+.head {
+  background-color: rgb(255, 177, 177);
+  padding: 10px 0;
+}
+
+.head__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.logo__link {}
+
+.logo svg {
+  display: block;
+}
+
+.logo__path {
+  transition: fill 0.3s ease;
+  fill: rgb(99, 93, 93);
+}
+
+.logo:hover .logo__path {
+  fill: rgba(0, 0, 0, 0.993);
+}
+
+.logo:active .logo__path {
+  fill: rgb(58, 58, 58);
+}
+
+.head__nav {}
+
+.menu__list {
+  display: flex;
+  gap: 20px;
+}
+
+.menu__list__item {}
+
+.menu__link {
+  text-decoration: none;
+}
+
+.main {}
+
+.about {
+  background-color: rgb(204, 201, 7);
+  padding: 32px 0 32px 0;
+}
+
+.about__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30px auto;
+  max-width: 1920px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.about__photo__wrap {
+  max-width: 500px;
+}
+
+.myphoto {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.about__txt__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.title {
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.about__txt {
+  text-indent: 32px
+}
+
+.examples {
+  background-color: rgb(139, 9, 151);
+  padding: 32px 0;
+}
+
+.examples__wrap {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.examples__list {}
+
+.examples__list__item {}
+
+.examples__title {}
+
+.examples__link {
+  text-decoration: none;
+}
+
+.contacts {
+  background-color: rgb(9, 151, 40);
+  padding: 32px 0;
+}
+
+.contacts__wrap {
+  padding: 0 20px;
+}
+
+.contacts__list {}
+
+.contacts__list__item {}
+
+.contacts__link {
+  text-decoration: none;
+}
+
+.bottom {
+  background-color: rgb(4, 42, 168);
+  padding: 32px 0;
+}
+
+.bottom__wrap {
+  padding: 0 20px;
+}
+
+.logo__bottom__wrap {}
+
+.bottom__txt {}
