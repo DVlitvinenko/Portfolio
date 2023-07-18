@@ -51,7 +51,7 @@ body {
   gap: 40px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5px 0 5px;
+  padding: 0 20px 0 20px;
 }
 
 .photo__wrap {
@@ -80,7 +80,7 @@ body {
 }
 
 .about__txt {
-  max-height: 800px;
+  min-height: 800px;
 }
 
 .examp__hobbi__wrap {
@@ -109,9 +109,6 @@ body {
 .accordion-button {}
 
 .accordion-body {}
-
-
-
 
 .hobbies {
   box-sizing: border-box;
@@ -169,6 +166,12 @@ body {
 }
 
 .bottom__link {}
+
+@media(max-width:1200px) {
+  body {
+    font-size: 20px;
+  }
+}
 
 @media(max-width:1024px) {
   body {
