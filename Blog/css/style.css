@@ -322,8 +322,15 @@ a {
 }
 
 .post__title {
-  margin: 16px;
+  margin: 0;
   text-align: center;
+}
+
+.post__time {
+  color: grey;
+  font-size: 10px;
+  margin: 8px;
+  text-align: right;
 }
 
 .post__txt {
@@ -332,6 +339,7 @@ a {
 
 .history__post {
   position: relative;
+  margin: 0 0 32px 0;
 }
 
 .filters {
@@ -350,6 +358,7 @@ a {
 
 .histori__post__wrap {
   padding: 0 226px 0 0;
+  margin: 0 0 32px 0;
 }
 
 .history__list {
