@@ -181,7 +181,7 @@ template {
 * {
   padding: 0;
   margin: 0;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 body {
@@ -208,6 +208,7 @@ a {
 
 .top {
   padding: 32px 0;
+  background: linear-gradient(rgba(174, 0, 255), rgba(174, 0, 255, 0.5));
 }
 
 .top__wrap {
@@ -218,19 +219,125 @@ a {
 
 .logo__link {}
 
-.top__logo__img {}
+.top__logo__img {
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
 
-.search__wrap {}
+.top__logo__img:hover {
+  transform: scale(1.2);
+  box-shadow: -2px -2px 15px 5px pink;
+}
 
-.search__input {}
+.top__logo__img:active {
+  transform: scale(1.1);
+  box-shadow: -1px -1px 14px 4px pink;
+}
 
-.search__label {}
+.search__wrap {
+  display: flex;
+  align-items: center;
+}
 
-.top__navigation {}
+.search__form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
 
-.top__nav__link {}
+.search__input {
+  padding: 3px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
 
-.blog {}
+.search__input:focus {
+  transform: scale(1.1);
+  box-shadow: -2px -2px 15px 5px pink;
+}
+
+.search__label {
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.search__label:hover {
+  opacity: 1;
+}
+
+.search__label:active {
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: -2px -2px 15px 5px pink;
+}
+
+.search__input:hover {
+  box-shadow: 0 0 10px 4px pink;
+}
+
+.search__input:focus~.search__label .search__label__svg {
+  visibility: hidden;
+}
+
+.search__input:focus~.form__submit {
+  visibility: visible;
+}
+
+.form__submit {
+  position: absolute;
+  top: 6px;
+  left: 285px;
+  background: pink;
+  padding: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.form__submit:hover {
+  transform: scale(1.1);
+  box-shadow: -2px -2px 15px 5px pink;
+}
+
+.form__submit:active {
+  transform: scale(1);
+  box-shadow: -1px -1px 15px 5px pink;
+}
+
+.top__navigation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top__nav__link {
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.top__nav__link:hover {
+  background-color: pink;
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: -1px -1px 15px 8px pink;
+}
+
+.top__nav__link:active {
+  background-color: pink;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: -1px -1px 15px 8px pink;
+}
+
+.blog {
+  background: linear-gradient(rgba(174, 0, 255, 0.5), rgba(255, 192, 203, 0.5));
+}
 
 .blog__wrap {}
 
@@ -257,13 +364,86 @@ a {
   right: 0;
 }
 
+.aside__search__form {
+  padding: 0 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.aside__search__input {
+  max-width: 200px;
+  width: 100%;
+  padding: 3px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.aside__search__input:hover {
+  box-shadow: 0 0 10px 4px pink;
+}
+
+.aside__search__input:focus {
+  transform: scale(1.1);
+  box-shadow: -2px -2px 15px 5px pink;
+}
+
+.aside__search__label {
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.aside__search__label:hover {
+  opacity: 1;
+}
+
+.aside__search__label:active {
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: -2px -2px 15px 5px pink;
+}
+
+.aside__search__input:focus~.aside__search__label .aside__search__label__svg {
+  visibility: hidden;
+}
+
+.aside__search__input:focus~.aside__form__submit {
+  visibility: visible;
+}
+
+.aside__form__submit {
+  position: absolute;
+  top: 6px;
+  left: 170px;
+  background: pink;
+  padding: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+
+.aside__form__submit:hover {
+  transform: scale(1.1);
+  box-shadow: -2px -2px 15px 5px pink;
+}
+
+.aside__form__submit:active {
+  transform: scale(1);
+  box-shadow: -1px -1px 15px 5px pink;
+}
+
 .bradcramp {}
 
 .general__post {
-  padding: 0 226px 0 0;
+  padding: 32px 226px 32px 0;
 }
 
-.title {}
+.title {
+  margin: 0;
+}
 
 .general__post__article {
   max-width: 1600px;
@@ -272,6 +452,18 @@ a {
   overflow-y: hidden;
   text-overflow: ellipsis;
   position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgb(174, 0, 255, 0.5);
+  border-radius: 0 45px 0 45px;
+}
+
+.general__post__article:hover {
+  box-shadow: -2px -2px 60px 15px pink;
+  background-color: rgba(255, 192, 203, 0.288);
+}
+
+.general__post__article:active {
+  box-shadow: -1px -1px 15px 5px rgba(255, 192, 203, 0.747);
 }
 
 .general__post__article::after {
@@ -282,7 +474,7 @@ a {
   right: 0;
   left: 0;
   height: 32px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(174, 0, 255, 0.5));
   pointer-events: none;
 }
 
@@ -293,6 +485,19 @@ a {
   overflow-y: hidden;
   text-overflow: ellipsis;
   position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgb(174, 0, 255, 0.5);
+  border-radius: 0 25px 0 25px;
+}
+
+
+.post__article:hover {
+  box-shadow: -2px -2px 60px 15px pink;
+  background-color: rgba(255, 192, 203, 0.288);
+}
+
+.post__article:active {
+  box-shadow: -1px -1px 15px 5px rgba(255, 192, 203, 0.747);
 }
 
 .post__article::after {
@@ -303,7 +508,7 @@ a {
   right: 0;
   left: 0;
   height: 32px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(174, 0, 255, 0.5));
   pointer-events: none;
 }
 
@@ -322,7 +527,7 @@ a {
 }
 
 .post__title {
-  margin: 0;
+  padding: 16px 0 0 0;
   text-align: center;
 }
 
@@ -339,7 +544,63 @@ a {
 
 .history__post {
   position: relative;
-  margin: 0 0 32px 0;
+}
+
+.breadcrumb {
+  padding: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.bread__item {}
+
+.bread__link {}
+
+.bread__link {
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+}
+
+.bread__link:hover {
+  background-color: pink;
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: -1px -1px 15px 8px pink;
+}
+
+.bread__link:active {
+  background-color: pink;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: -1px -1px 15px 8px pink;
+}
+
+.bread__link::before {
+  content: "";
+  margin: auto;
+  width: 16px;
+  height: 3px;
+  background: pink;
+  position: absolute;
+  left: -22px;
+  top: 10px;
+}
+
+.bread__link::after {
+  content: "";
+  margin: auto;
+  width: 16px;
+  height: 3px;
+  background: pink;
+  position: absolute;
+  right: -22px;
+  top: 10px;
 }
 
 .filters {
@@ -354,7 +615,26 @@ a {
 
 .filters__list__item {}
 
-.filter__link {}
+.filter__link {
+  color: black;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter__link:hover {
+  background-color: pink;
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: -1px -1px 15px 8px pink;
+}
+
+.filter__link:active {
+  background-color: pink;
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: -1px -1px 15px 8px pink;
+}
 
 .histori__post__wrap {
   padding: 0 226px 0 0;
@@ -382,14 +662,29 @@ a {
   margin: 0 auto 16px auto;
   padding: 16px 32px;
   border: none;
-  border-radius: 16px;
+  border-radius: 32px;
+  background-color: rgba(255, 175, 188, 0.692);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.bottom {}
+.load__post__button:hover {
+  transform: scale(1.2);
+  box-shadow: -1px -1px 15px 8px pink;
+}
+
+.load__post__button:active {
+  transform: scale(1);
+  box-shadow: -1px -1px 10px 5px pink;
+}
+
+.bottom {
+  background: linear-gradient(rgba(255, 192, 203, 0.5), rgba(234, 0, 255, 0.5));
+}
 
 .bottom__wrap {
   display: flex;
-  padding: 32px 20px;
+  padding: 64px 20px 32px 20px;
   gap: 20px;
   justify-content: space-between;
 }
@@ -407,4 +702,19 @@ a {
 
 .contacts__list__item {}
 
-.contacts__link {}
+.contacts__link svg {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contacts__link:hover svg {
+  fill: pink;
+  transform: scale(1.2);
+  box-shadow: -2px -2px 15px 5px pink;
+}
+
+.contacts__link:active svg {
+  fill: rgb(255, 215, 222);
+  transform: scale(1.1);
+  box-shadow: -1px -1px 14px 4px pink;
+}
