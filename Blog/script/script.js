@@ -22,14 +22,14 @@ function filters(data) {
   filterNewEl.addEventListener('click', function () {
     clireHistoryPost()
     data = data.sort(function (a, b) {
-      return new Date(a.time) - new Date(b.time);
+      return new Date(b.time) - new Date(a.time);
     });
     loadContentPost(data);
   });
   filterOldEl.addEventListener('click', function () {
     clireHistoryPost()
     data = data.sort(function (a, b) {
-      return new Date(b.time) - new Date(a.time);
+      return new Date(a.time) - new Date(b.time);
     });
     loadContentPost(data);
   });
@@ -71,11 +71,11 @@ const loadContentPost = (array) => {
       linkPostOpenEl.appendChild(postTitleEl);
       const postTimeEl = document.createElement('p');
       postTimeEl.classList.add('post__time');
-      postTimeEl.textContent = element.time;
+      postTimeEl.innerHTML = element.time;
       linkPostOpenEl.appendChild(postTimeEl);
       const postTxtEl = document.createElement('p');
       postTxtEl.classList.add('post__txt');
-      postTxtEl.textContent = element.txt;
+      postTxtEl.innerHTML = element.txt;
       linkPostOpenEl.appendChild(postTxtEl);
       countStart++;
     }
@@ -91,7 +91,7 @@ const loudContent = (data) => {
 
 const genPostLouder = (array) => {
   array = array.sort(function (a, b) {
-    return new Date(a.time) - new Date(b.time);
+    return new Date(b.time) - new Date(a.time);
   });
   const sectionGenPostEl = document.querySelector('.general__post');
   const postArticEl = document.createElement('article');
@@ -117,17 +117,58 @@ const genPostLouder = (array) => {
   linkPostOpenEl.appendChild(postTitleEl);
   const postTimeEl = document.createElement('p');
   postTimeEl.classList.add('post__time');
-  postTimeEl.textContent = array[0].time;
+  postTimeEl.innerHTML = array[0].time;
   linkPostOpenEl.appendChild(postTimeEl);
   const postTxtEl = document.createElement('p');
   postTxtEl.classList.add('post__txt');
-  postTxtEl.textContent = array[0].txt;
+  postTxtEl.innerHTML = array[0].txt;
   linkPostOpenEl.appendChild(postTxtEl);
   array = array.filter(o => o.id !== array[0].id)
   filters(array);
   loudContent(array);
 };
 
-let data = JSON.parse(dataPosts);
+
+const clickedPost = () => {
+  const articlEls = document.querySelectorAll('article');
+  articlEls.forEach(element => {
+    element.addEventListener('click', function (element) {
+      const parentEl = element.target.parentElement.parentElement;
+      sessionStorage.setItem('post', parentEl.innerHTML);
+      document.location.assign("./postPaig.html");
+    });
+  });
+}
+
+const loaded = () => {
+  document.addEventListener('DOMContentLoaded', function (e) {
+    if (document.querySelector('.general__post')) {
+      let data = JSON.parse(dataPosts);
+      genPostLouder(data);
+    }
+    clickedPost();
+    loudPost();
+  });
+}
+
+const loudPost = () => {
+  if (document.querySelector('.post__cliked')) {
+    const postCkicedEl = document.querySelector('.post__cliked');
+    postCkicedEl.innerHTML = (sessionStorage.getItem('post').replace('"', ''));
+    const aEl = document.querySelector('.post__open__link');
+    aEl.setAttribute('class', 'post__open__link__opened');
+    const imgEl = document.querySelector('.post__img');
+    imgEl.setAttribute('class', 'post__img__open');
+    const h2El = document.querySelector('.post__title');
+    h2El.setAttribute('class', 'post__h2__open');
+    const pTxtEl = document.querySelector('.post__txt');
+    pTxtEl.setAttribute('class', 'post__txt__open');
+    const PtimeEl = document.querySelector('.post__time');
+    PtimeEl.setAttribute('class', 'post__time__open');
+    const title = document.querySelector('title');
+    title.textContent = h2El.textContent;
+  }
+}
 const postsIds = [];
-genPostLouder(data);
+loaded();
+

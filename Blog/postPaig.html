@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Блог</title>
+  <title>Страница поста</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="top" id="top">
     <div class="top__wrap center">
-      <a href="#" class="logo__link">
+      <a href="index.html" class="logo__link">
         <img src="img/logo.png" alt="logo" class="top__logo__img" height="40">
       </a>
       <div class="search__wrap">
@@ -22,15 +22,15 @@
             <svg class="search__label__svg" width="40px" height="40px" viewBox="0 0 24 24" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g>
-                <rect width="24" height="24" fill="white" />
+                <rect width="24" height="24" fill="none" />
                 <circle cx="10.5" cy="10.5" r="6.5" stroke="#000000" stroke-linejoin="round" />
                 <path
                   d="M19.6464 20.3536C19.8417 20.5488 20.1583 20.5488 20.3536 20.3536C20.5488 20.1583 20.5488 19.8417 20.3536 19.6464L19.6464 20.3536ZM20.3536 19.6464L15.3536 14.6464L14.6464 15.3536L19.6464 20.3536L20.3536 19.6464Z"
-                  fill="#000000" />
+                  fill="none" />
               </g>
               <defs>
-                <clipPath id="clip0_15_153">
-                  <rect width="24" height="24" fill="white" />
+                <clipPath id="clip0_15_152">
+                  <rect width="24" height="24" fill="none" />
                 </clipPath>
               </defs>
             </svg></label>
@@ -40,17 +40,15 @@
         </form>
       </div>
       <nav class="top__navigation">
-        <a href="#history" class="top__nav__link">История постов</a>
+        <a href="index.html#history" class="top__nav__link">История постов</a>
         <a href="#contacts" class="top__nav__link">Контакты</a>
       </nav>
     </div>
   </header>
   <main class="blog">
     <div class="blog__wrap center">
-      <section class="general__post" id="generalpost">
-        <h1 class="title">Отношения относительны!</h1>
-      </section>
       <section class="history__post" id="history">
+        <h1 class="title">Отношения относительны!</h1>
         <aside class="aside__wrap">
           <div class="aside">
             <form action="#" class="aside__search__form">
@@ -66,7 +64,7 @@
                       fill="#000000" />
                   </g>
                   <defs>
-                    <clipPath id="clip0_15_154">
+                    <clipPath id="clip0_15_15">
                       <rect width="24" height="24" fill="white" />
                     </clipPath>
                   </defs>
@@ -79,10 +77,10 @@
             <nav>
               <ul class="breadcrumb">
                 <li class="bread__item">
-                  <a class="bread__link" href="#top">Главная</a>
+                  <a class="bread__link" href="index.html">Главная</a>
                 </li>
                 <li class="bread__item">
-                  <a class="bread__link" href="#generalpost">Гланый&nbsp;пост</a>
+                  <a class="bread__link" href="index.html#generalpost">Гланый&nbsp;пост</a>
                 </li>
                 <li class="bread__item">
                   <a class="bread__link" href="#contacts">Контакты</a>
@@ -91,25 +89,7 @@
             </nav>
           </div>
         </aside>
-        <div class="filters">
-          <ul class="filters__list">
-            <li class="filters__list__item">
-              <a href="#" class="filter__link new__filter">Показать новые</a>
-            </li>
-            <li class="filters__list__item">
-              <a href="#" class="filter__link old__filter">Показать старые</a>
-            </li>
-            <li class="filters__list__item">
-              <a href="#" class="filter__link alphabet__filter">Показать по умолчанию</a>
-            </li>
-          </ul>
-        </div>
-        <div class="histori__post__wrap">
-          <ul class="history__list">
-          </ul>
-        </div>
-        <div class="button__wrap center">
-          <button class="load__post__button">Загрузить еще!</button>
+        <div class="post__cliked center">
         </div>
       </section>
     </div>
@@ -159,9 +139,8 @@
       </ul>
     </div>
   </footer>
-  <script src="script/data.js"></script>
-  <script src="script/script.js"></script>
   <script src="script/newPage.js"></script>
+  <script src="script/script.js"></script>
 </body>
 
 </html>
