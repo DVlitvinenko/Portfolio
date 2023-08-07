@@ -456,5 +456,3 @@ filterRange();
 categories();
 actionForming();
 actionScroll();
-beforeunload();
-console.log(sessionStorage.pageNum);
