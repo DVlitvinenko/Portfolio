@@ -163,6 +163,7 @@ function dellOutBusket() {
   const clearBtn = document.querySelector('.basket__clear__btn');
   clearBtn.addEventListener('click', () => {
     busketArticules = {};
+    basket();
   });
   busketEls.forEach(element => {
     element.addEventListener('click', function () {
