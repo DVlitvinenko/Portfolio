@@ -21,7 +21,7 @@ ul {
 }
 
 .center {
-  max-width: 2400px;
+  max-width: 1924px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
@@ -59,15 +59,99 @@ ul {
 
 .superprise {
   background-color: #5f4531;
-  padding: 16px 20px 6px 0;
+  padding: 4px 0 4px 0;
+  position: relative;
+}
+
+.scroll__left {
+  left: 0;
+}
+
+.scroll__right {
+  right: 0;
+}
+
+.scroll__left,
+.scroll__right {
+  width: 0px;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll__left:hover,
+.scroll__right:hover {
+  background: #584a3e;
+  box-shadow: 3px 3px 64px 32px #000000be;
+}
+
+.scroll__left::before {
+  content: '';
+  width: 64px;
+  height: 16px;
+  background: #4c2f17;
+  top: 88px;
+  left: 0px;
+  z-index: 2;
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 16px;
+}
+
+.scroll__left::after {
+  content: '';
+  width: 64px;
+  height: 16px;
+  background: #4c2f17;
+  top: 54px;
+  left: 0px;
+  z-index: 2;
+  position: absolute;
+  transform: rotate(-45deg);
+  border-radius: 16px;
+}
+
+.scroll__right::before {
+  content: '';
+  width: 64px;
+  height: 16px;
+  background: #4c2f17;
+  top: 88px;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  transform: rotate(-45deg);
+  border-radius: 16px;
+}
+
+.scroll__right::after {
+  content: '';
+  width: 64px;
+  height: 16px;
+  background: #4c2f17;
+  top: 54px;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  transform: rotate(45deg);
+  border-radius: 16px;
+}
+
+.superprise__wrap {
+  padding: 0 64px;
 }
 
 .super__list {
-  background-color: #5f4531;
+  background-color: #463324;
   display: flex;
-  gap: 32px;
+  gap: 60px;
   overflow: hidden;
-  padding: 0 0 4px 0;
+  padding: 8px 0 14px 0;
+  background: linear-gradient(90deg, #3a2412, #4c2f1700 20%), linear-gradient(270deg, #3a2412, #4c2f1700 20%), #463324;
+  border-radius: 4px;
 }
 
 .super__item {
@@ -387,6 +471,24 @@ ul {
   padding: 32px;
   display: flex;
   flex-direction: column
+}
+
+.sort__wrap {
+  padding: 0 0 32px 0;
+}
+
+.sort__select {
+  padding: 0 8px;
+  cursor: pointer;
+  height: 32px;
+  width: 280px;
+  border: none;
+  border-radius: 25px;
+  pointer-events: auto;
+  -moz-appearance: none;
+  background: #584a3e;
+  box-shadow: 3px 3px 2px 2px #00000085;
+  color: #e0ccbe;
 }
 
 .shoping__list {

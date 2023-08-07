@@ -1,4 +1,4 @@
-const filterRange = () => {
+function filterRange() {
   const rangeInput = document.querySelectorAll(".filter__range__input input"),
     priceInput = document.querySelectorAll(".filter__price__input input"),
     range = document.querySelector(".filter__slider .filter__progress");
@@ -45,7 +45,7 @@ const filterRange = () => {
   });
 };
 
-const serachData = (param) => {
+function serachData(param) {
   let temp = {};
   data.forEach(element => {
     if (element.articul === param) {
@@ -55,7 +55,7 @@ const serachData = (param) => {
   return temp;
 };
 
-const basket = () => {
+function basket() {
   const categoriesEl = document.querySelector('.categories');
   categoriesEl.style.display = 'none';
   const shopingEl = document.querySelector('.shoping');
@@ -95,7 +95,6 @@ const basket = () => {
     liEl.classList.add('basket__prod__item');
     liEl.setAttribute('articul', key);
     busketListEls.appendChild(liEl);
-
     const prodName = document.createElement('span');
     prodName.classList.add('basket__prod__name');
     prodName.textContent = `${dataBusket.title}, цвет: ${dataBusket.color}, размер: ${dataBusket.size}, материал: ${dataBusket.material}`;
@@ -143,29 +142,27 @@ const basket = () => {
   dellOutBusket();
   basketProductCount();
   basketProductSumm();
-  addToBusket();
 };
 
-const addToBusket = () => {
-  const prodactsEls = document.querySelectorAll('.prodact ');
-  prodactsEls.forEach(element => {
-    element.addEventListener('click', function () {
-      const articulValue = element.getAttribute('articul');
-      if (busketArticules[articulValue]) {
-        busketArticules[articulValue]++;
-      } else {
-        busketArticules[articulValue] = 1;
-      }
-    });
+function addToBusket(target) {
+  target.addEventListener('click', function () {
+    const articulValue = target.getAttribute('articul');
+    if (busketArticules[articulValue]) {
+      busketArticules[articulValue]++;
+    } else {
+      busketArticules[articulValue] = 1;
+    }
+    const basketEl = document.querySelector('.basket');
+    if (basketEl.style.display === 'flex') {
+    }
   });
 };
 
-const dellOutBusket = () => {
+function dellOutBusket() {
   const busketEls = document.querySelectorAll('.basket__prod__dell');
   const clearBtn = document.querySelector('.basket__clear__btn');
   clearBtn.addEventListener('click', () => {
     busketArticules = {};
-    basket();
   });
   busketEls.forEach(element => {
     element.addEventListener('click', function () {
@@ -175,13 +172,13 @@ const dellOutBusket = () => {
           delete busketArticules[art];
         }
       }
-      element.parentElement.remove();
       basketProductSumm();
+      element.parentElement.remove();
     });
   });
 };
 
-const basketProductCount = () => {
+function basketProductCount() {
   const busketEls = document.querySelectorAll('.basket__prod__dell');
   busketEls.forEach(element => {
     const articulValue = element.parentElement.getAttribute('articul');
@@ -232,7 +229,7 @@ const basketProductCount = () => {
   );
 };
 
-const basketProductSumm = () => {
+function basketProductSumm() {
   const basketEl = document.querySelector('.basket');
   const basketProdPriceEls = basketEl.querySelectorAll('.basket__prod__price');
   const basketProdPriceSummEl = basketEl.querySelectorAll('.basket__summ__value');
@@ -254,7 +251,7 @@ const basketProductSumm = () => {
   });
 };
 
-const categories = () => {
+function categories() {
   const categoriesEl = document.querySelector('.categories');
   categoriesEl.style.display = 'block';
   const shopingEl = document.querySelector('.shoping');
@@ -266,7 +263,7 @@ const categories = () => {
   addInplace('Категории');
 }
 
-const cabinet = () => {
+function cabinet() {
   const categoriesEl = document.querySelector('.categories');
   categoriesEl.style.display = 'none';
   const shopingEl = document.querySelector('.shoping');
@@ -276,10 +273,9 @@ const cabinet = () => {
   const basketEl = document.querySelector('.basket');
   basketEl.style.display = 'none';
   addInplace('Личный кабинет');
-  addToBusket();
 }
 
-const addInplace = (content) => {
+function addInplace(content) {
   const liEl = document.querySelectorAll('.nav__list__item');
   liEl.forEach(element => {
     if (element.firstElementChild.textContent === content) {
@@ -290,7 +286,7 @@ const addInplace = (content) => {
   });
 }
 
-const shoplistProdactAdd = () => {
+function shoplistProdactAdd() {
   const shopingEl = document.querySelector('.shoping');
   const shopingListEl = shopingEl.querySelector('.shoping__list');
   let count = 0;
@@ -311,6 +307,7 @@ const shoplistProdactAdd = () => {
         articleEl.classList.add('prodact', 'button__hover');
         articleEl.setAttribute('articul', element.articul);
         visibleProdArticuls.push(element.articul);
+        addToBusket(articleEl);
 
         liEl.appendChild(articleEl);
 
@@ -355,14 +352,109 @@ const AllProducts = () => {
   const basketEl = document.querySelector('.basket');
   basketEl.style.display = 'none';
   addInplace('Все товары');
-  shoplistProdactAdd(); addToBusket();
+  shoplistProdactAdd();
 }
 
+const sorting = () => {
+  const selectEl = document.querySelector('.sort__select');
+  if (selectEl.value === 'priceDown') {
+    data.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+  }
+  else { data.sort((a, b) => parseFloat(a.price) - parseFloat(b.price)); }
+  selectEl.addEventListener('change', function () {
+    visibleProdArticuls.length = 0;
+    const shopListItem = document.querySelectorAll('.shoping__item');
+    shopListItem.forEach(element => {
+      element.remove();
+    });
+    if (selectEl.value === 'priceDown') {
+      data.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+    }
+    else { data.sort((a, b) => parseFloat(a.price) - parseFloat(b.price)); }
+    AllProducts();
+  });
+}
 
+const actionForming = () => {
+  const shopingListEl = document.querySelector('.super__list');
+  let count = 0;
+  data.forEach(element => {
+    if (data.length === 0) {
+      const titleEl = document.createElement('span');
+      titleEl.classList.add('prodact__title');
+      titleEl.textContent = 'Товары не найдены';
+      shopingListEl.appendChild(titleEl);
+    }
+    else {
+      if (!visibleProdArticuls.includes(element.articul) && count < 16) {
+        const liEl = document.createElement('li');
+        liEl.classList.add('super__item');
+        shopingListEl.appendChild(liEl);
+
+        const articleEl = document.createElement('article');
+        articleEl.classList.add('prodact', 'button__hover', 'absolute');
+        articleEl.setAttribute('articul', element.articul);
+        addToBusket(articleEl);
+        visibleProdArticuls.push(element.articul);
+
+        liEl.appendChild(articleEl);
+
+        const linkEl = document.createElement('a');
+        linkEl.classList.add('prodact__link');
+        articleEl.appendChild(linkEl);
+
+        const titleEl = document.createElement('span');
+        titleEl.classList.add('prodact__title');
+        titleEl.textContent = element.title;
+        linkEl.appendChild(titleEl);
+
+        const imgEl = document.createElement('img');
+        imgEl.setAttribute('alt', 'prodact');
+        imgEl.classList.add('prodact__img');
+        imgEl.setAttribute('src', element.imgSrc);
+        linkEl.appendChild(imgEl);
+
+        const priceEl = document.createElement('span');
+        priceEl.classList.add('prodact__price');
+        priceEl.textContent = `${element.price}р, ${element.color}, ${element.material}, ${element.size}`;
+        linkEl.appendChild(priceEl);
+
+        const btnEl = document.createElement('button');
+        btnEl.classList.add('prodact__btn', 'button__hover');
+        btnEl.textContent = 'Купить!';
+        linkEl.appendChild(btnEl);
+
+        count++;
+      }
+    }
+  });
+}
+
+const actionScroll = () => {
+  const frameEl = document.querySelector('.super__list');
+  const leftEl = document.querySelector('.scroll__left');
+  const rightEl = document.querySelector('.scroll__right');
+  leftEl.addEventListener('mouseover', () => {
+    let timerId = setInterval(() => frameEl.scrollBy(-1, 0), 5);
+    leftEl.addEventListener('mouseleave', () => {
+      clearTimeout(timerId);
+    });
+  });
+  rightEl.addEventListener('mouseover', () => {
+    let timerId = setInterval(() => frameEl.scrollBy(1, 0), 5);
+    rightEl.addEventListener('mouseleave', () => {
+      clearTimeout(timerId);
+    });
+  });
+}
 
 const data = dataProd;
-let busketArticules = { '00001': 2 };
+let busketArticules = {};
 let visibleProdArticuls = [];
-addToBusket();
+sorting();
 filterRange();
-
+categories();
+actionForming();
+actionScroll();
+beforeunload();
+console.log(sessionStorage.pageNum);
