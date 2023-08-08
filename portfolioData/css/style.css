@@ -318,6 +318,7 @@ ul {
 }
 
 .examples__link {
+  display: block;
   text-decoration: none;
   color: #0C1622;
   background-color: #4985C8;

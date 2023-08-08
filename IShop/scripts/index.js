@@ -65,6 +65,11 @@ function basket() {
   const basketEl = document.querySelector('.basket');
   basketEl.style.display = 'flex';
   addInplace('Корзина');
+  basketForming();
+};
+
+const basketForming = () => {
+  const basketEl = document.querySelector('.basket');
   basketEl.innerHTML = `<div class="basket__products">
   <h2 class="basket__title">Корзина</h2>
   <ul class="basket__prod__list">
@@ -142,7 +147,7 @@ function basket() {
   dellOutBusket();
   basketProductCount();
   basketProductSumm();
-};
+}
 
 function addToBusket(target) {
   target.addEventListener('click', function () {
@@ -155,6 +160,10 @@ function addToBusket(target) {
     const basketEl = document.querySelector('.basket');
     if (basketEl.style.display === 'flex') {
     }
+    const infoEl = target.querySelector('.prodact__inform');
+    infoEl.style.display = 'block';
+    setTimeout(() => infoEl.style.display = 'none', 500);
+    basketForming();
   });
 };
 
@@ -163,7 +172,7 @@ function dellOutBusket() {
   const clearBtn = document.querySelector('.basket__clear__btn');
   clearBtn.addEventListener('click', () => {
     busketArticules = {};
-    basket();
+    basketForming();
   });
   busketEls.forEach(element => {
     element.addEventListener('click', function () {
@@ -321,6 +330,11 @@ function shoplistProdactAdd() {
         titleEl.textContent = element.title;
         linkEl.appendChild(titleEl);
 
+        const infoEl = document.createElement('span');
+        infoEl.classList.add('prodact__inform');
+        infoEl.textContent = 'Добавлено в корзину';
+        linkEl.appendChild(infoEl);
+
         const imgEl = document.createElement('img');
         imgEl.setAttribute('alt', 'prodact');
         imgEl.classList.add('prodact__img');
@@ -387,46 +401,48 @@ const actionForming = () => {
       shopingListEl.appendChild(titleEl);
     }
     else {
-      if (!visibleProdArticuls.includes(element.articul) && count < 16) {
-        const liEl = document.createElement('li');
-        liEl.classList.add('super__item');
-        shopingListEl.appendChild(liEl);
+      const liEl = document.createElement('li');
+      liEl.classList.add('super__item');
+      shopingListEl.appendChild(liEl);
 
-        const articleEl = document.createElement('article');
-        articleEl.classList.add('prodact', 'button__hover', 'absolute');
-        articleEl.setAttribute('articul', element.articul);
-        addToBusket(articleEl);
-        visibleProdArticuls.push(element.articul);
+      const articleEl = document.createElement('article');
+      articleEl.classList.add('prodact', 'button__hover', 'absolute');
+      articleEl.setAttribute('articul', element.articul);
+      addToBusket(articleEl);
 
-        liEl.appendChild(articleEl);
+      liEl.appendChild(articleEl);
 
-        const linkEl = document.createElement('a');
-        linkEl.classList.add('prodact__link');
-        articleEl.appendChild(linkEl);
+      const linkEl = document.createElement('a');
+      linkEl.classList.add('prodact__link');
+      articleEl.appendChild(linkEl);
 
-        const titleEl = document.createElement('span');
-        titleEl.classList.add('prodact__title');
-        titleEl.textContent = element.title;
-        linkEl.appendChild(titleEl);
+      const titleEl = document.createElement('span');
+      titleEl.classList.add('prodact__title');
+      titleEl.textContent = element.title;
+      linkEl.appendChild(titleEl);
 
-        const imgEl = document.createElement('img');
-        imgEl.setAttribute('alt', 'prodact');
-        imgEl.classList.add('prodact__img');
-        imgEl.setAttribute('src', element.imgSrc);
-        linkEl.appendChild(imgEl);
+      const infoEl = document.createElement('span');
+      infoEl.classList.add('prodact__inform');
+      infoEl.textContent = 'Добавлено в корзину';
+      linkEl.appendChild(infoEl);
 
-        const priceEl = document.createElement('span');
-        priceEl.classList.add('prodact__price');
-        priceEl.textContent = `${element.price}р, ${element.color}, ${element.material}, ${element.size}`;
-        linkEl.appendChild(priceEl);
+      const imgEl = document.createElement('img');
+      imgEl.setAttribute('alt', 'prodact');
+      imgEl.classList.add('prodact__img');
+      imgEl.setAttribute('src', element.imgSrc);
+      linkEl.appendChild(imgEl);
 
-        const btnEl = document.createElement('button');
-        btnEl.classList.add('prodact__btn', 'button__hover');
-        btnEl.textContent = 'Купить!';
-        linkEl.appendChild(btnEl);
+      const priceEl = document.createElement('span');
+      priceEl.classList.add('prodact__price');
+      priceEl.textContent = `${element.price}р, ${element.color}, ${element.material}, ${element.size}`;
+      linkEl.appendChild(priceEl);
 
-        count++;
-      }
+      const btnEl = document.createElement('button');
+      btnEl.classList.add('prodact__btn', 'button__hover');
+      btnEl.textContent = 'Купить!';
+      linkEl.appendChild(btnEl);
+
+      count++;
     }
   });
 }

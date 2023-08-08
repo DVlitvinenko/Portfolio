@@ -41,6 +41,10 @@ ul {
   background-color: #4c2f17;
 }
 
+.nav__line {
+  display: none;
+}
+
 .nav__list {
   display: flex;
   gap: 32px;
@@ -190,6 +194,19 @@ ul {
   overflow: hidden;
 }
 
+.prodact__inform {
+  position: absolute;
+  top: 160px;
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 6;
+  background-color: #3a2412;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
 .prodact__img {
   opacity: 0.8;
   max-width: 240px;
@@ -289,6 +306,9 @@ ul {
   gap: 16px;
   flex-direction: column;
   justify-content: start;
+  position: sticky;
+  top: 222px;
+  left: 0;
 }
 
 .filter__select {
@@ -335,8 +355,6 @@ ul {
   font-size: 14px;
   border-radius: 2px;
 }
-
-.filter__separator {}
 
 .filter__input__max {
   width: 60px;
@@ -765,4 +783,134 @@ ul {
 
 .inplace {
   color: #8b8476;
+}
+
+@media (max-width: 1300px) {
+  .shoping__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+    justify-items: stretch;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .super__list {
+    gap: 40px;
+    border-radius: 4px;
+  }
+
+  .categories {
+    padding: 64px 20px;
+    background-color: #755c48;
+  }
+
+  .cat__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+
+  .cat__list__item {
+    max-width: 300px;
+    height: 225px;
+  }
+
+  .filters {
+    max-width: 200px;
+  }
+
+  .filters__submit {
+    padding: 13px;
+    font-size: 20px;
+  }
+
+  .filters__form {
+    gap: 14px;
+  }
+
+  .filter__field {
+    font-size: 12px;
+  }
+
+  .filter__input__min {
+    width: 50px;
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .filter__input__max {
+    width: 50px;
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .absolute {
+    position: absolute;
+    top: -40px;
+    left: 0px;
+  }
+
+  .shoping__list {
+    gap: 32px;
+  }
+
+  .prodact__link {
+    min-width: 220px;
+    height: 200px;
+  }
+
+  .prodact__title {
+    font-size: 16px;
+  }
+
+  .prodact__inform {
+    font-size: 18px;
+  }
+
+  .prodact__img {
+    max-width: 200px;
+  }
+
+  .prodact__price {
+    font-size: 16px;
+  }
+
+  .prodact__btn {
+    max-width: 70px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  .shoping__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav__line {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    margin: auto;
+  }
+
+  .nav__line::after,
+  .nav__line::before {
+    content: '';
+  }
+
+  .nav__list {
+    visibility: hidden;
+    position: absolute;
+  }
 }
