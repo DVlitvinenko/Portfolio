@@ -17,6 +17,7 @@ h1 {
 }
 
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
   overflow: visible
@@ -34,6 +35,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted
 }
 
@@ -121,6 +123,7 @@ fieldset {
 }
 
 legend {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: inherit;
   display: table;
@@ -139,6 +142,7 @@ textarea {
 
 [type=checkbox],
 [type=radio] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0
 }
@@ -200,13 +204,20 @@ ul {
 }
 
 .head__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
   max-width: 1920px;
   width: 100%;
   padding: 0 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -226,23 +237,31 @@ ul {
 }
 
 .logo__path {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   fill: #0C1622;
 }
 
 .logo:hover .logo__path {
   fill: #83A3CB;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
 .logo:active .logo__path {
   fill: #0C1622;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 
 .head__nav {}
 
 .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
@@ -262,12 +281,17 @@ ul {
 }
 
 .about__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0 auto 30px auto;
   max-width: 1920px;
   width: 100%;
   padding: 0 20px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   gap: 20px;
 }
@@ -284,7 +308,12 @@ ul {
 }
 
 .about__txt__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 3px;
 }
@@ -305,7 +334,11 @@ ul {
 
 .examples__wrap {
   padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -324,6 +357,7 @@ ul {
   background-color: #4985C8;
   padding: 5px;
   border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 2px 2px #0C1622;
   box-shadow: 5px 5px 2px 2px #0C1622;
 }
 
@@ -337,9 +371,15 @@ ul {
 }
 
 .contacts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -368,6 +408,8 @@ ul {
 /* Hover */
 
 .link__hover {
+  -webkit-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 
@@ -380,6 +422,8 @@ ul {
 }
 
 .contacts__link svg path {
+  -webkit-transition: fill 0.2s ease;
+  -o-transition: fill 0.2s ease;
   transition: fill 0.2s ease;
 }
 
@@ -397,9 +441,12 @@ ul {
   }
 
   .menu__list {
+    display: -ms-grid;
     display: grid;
     gap: 12px;
+    -ms-grid-columns: 1fr 12px 1fr;
     grid-template-columns: repeat(2, 1fr);
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 
@@ -443,14 +490,131 @@ ul {
   }
 
   .contacts__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
   .contacts__link {
     font-size: 16px;
+  }
+}
+
+.puls1 {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-name: pulsation;
+  animation-name: pulsation;
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.puls2 {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-name: pulsation;
+  animation-name: pulsation;
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.puls3 {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-name: pulsation;
+  animation-name: pulsation;
+  -webkit-animation-delay: 5.5s;
+  animation-delay: 5.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.puls4 {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-name: pulsation;
+  animation-name: pulsation;
+  -webkit-animation-delay: 6.5s;
+  animation-delay: 6.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulsation {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  5% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 6px 6px 3px 3px #0C1622;
+    box-shadow: 6px 6px 3px 3px #0C1622;
+  }
+
+  15% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-box-shadow: 4px 4px 2px 2px #0C1622;
+    box-shadow: 4px 4px 2px 2px #0C1622;
+  }
+
+  30% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 6px 6px 3px 3px #0C1622;
+    box-shadow: 6px 6px 3px 3px #0C1622;
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes pulsation {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  5% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 6px 6px 3px 3px #0C1622;
+    box-shadow: 6px 6px 3px 3px #0C1622;
+  }
+
+  15% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    -webkit-box-shadow: 4px 4px 2px 2px #0C1622;
+    box-shadow: 4px 4px 2px 2px #0C1622;
+  }
+
+  30% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-box-shadow: 6px 6px 3px 3px #0C1622;
+    box-shadow: 6px 6px 3px 3px #0C1622;
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }

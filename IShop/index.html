@@ -32,7 +32,7 @@
         </li>
       </ul>
     </nav>
-    <section class="superprise center">
+    <div class="superprise center">
       <div class="scroll__left"></div>
       <div class="scroll__right"></div>
       <div class="superprise__wrap">
@@ -40,44 +40,44 @@
 
         </ul>
       </div>
-    </section>
+    </div>
   </header>
   <main class="main">
     <section class="categories center">
       <ul class="cat__list">
         <li class="cat__list__item" onclick="AllProducts()">
           <a href="javascript:void(0)" class="cat__link">
-            <span class="cat__title link__hover">Обувь</span>
+            <h3 class="cat__title link__hover">Обувь</h3>
           </a>
         </li>
         <li class="cat__list__item" onclick="AllProducts()">
           <a href="javascript:void(0)" class="cat__link">
-            <span class="cat__title boots link__hover">Ботинки</span>
+            <h3 class="cat__title boots link__hover">Ботинки</h3>
           </a>
         </li>
         <li class="cat__list__item" onclick="AllProducts()">
           <a href="javascript:void(0)" class="cat__link">
-            <span class="cat__title shoes link__hover">Туфли</span>
+            <h3 class="cat__title shoes link__hover">Туфли</h3>
           </a>
         </li>
         <li class="cat__list__item" onclick="AllProducts()">
           <a href="javascript:void(0)" class="cat__link">
-            <span class="cat__title sneakers link__hover">Кросовки</span>
+            <h3 class="cat__title sneakers link__hover">Кросовки</h3>
           </a>
         </li>
         <li class="cat__list__item" onclick="AllProducts()">
           <a href="javascript:void(0)" class="cat__link">
-            <span class="cat__title moccasins link__hover">Мокасины</span>
+            <h3 class="cat__title moccasins link__hover">Мокасины</h3>
           </a>
         </li>
         <li class="cat__list__item" onclick="AllProducts()">
           <a href="javascript:void(0)" class="cat__link">
-            <span class="cat__title jackboot link__hover">Сапоги</span>
+            <h3 class="cat__title jackboot link__hover">Сапоги</h3>
           </a>
         </li>
       </ul>
     </section>
-    <section class="shoping center">
+    <div class="shoping center">
       <div class="filters">
         <input type="checkbox" class="form__hidden__input" id="formHiddenInput">
         <label for="formHiddenInput" class="form__hidden__label button__hover">Фильтры</label>
@@ -106,7 +106,7 @@
             <li class="filter__item">
               <label for="size-select" class="filter__label">Размер:</label>
               <select name="size" id="size-select" class="filter__select">
-                <option value=""></option>
+                <option value="">Выберите</option>
                 <option value="l">L</option>
                 <option value="XL">XL</option>
                 <option value="XXL">XXL</option>
@@ -118,7 +118,7 @@
             <li class="filter__item">
               <label for="color-select" class="filter__label">Цвет:</label>
               <select name="color" id="color-select" class="filter__select">
-                <option value=""></option>
+                <option value="">Выберите</option>
                 <option value="white">Белый</option>
                 <option value="black">Черный</option>
                 <option value="green">Зеленый</option>
@@ -130,7 +130,7 @@
             <li class="filter__item">
               <label for="material-select" class="filter__label">Материал:</label>
               <select name="material" id="material-select" class="filter__select">
-                <option value=""></option>
+                <option value="">Выберите</option>
                 <option value="Leatherette">Кожзам</option>
                 <option value="pelt">Кожа</option>
                 <option value="cloth">Ткань</option>
@@ -140,7 +140,7 @@
             <li class="filter__item">
               <label for="type-select" class="filter__label">Тип:</label>
               <select name="type" id="type-select" class="filter__select">
-                <option value=""></option>
+                <option value="">Выберите</option>
                 <option value="boots">Ботинки</option>
                 <option value="shoes">Туфли</option>
                 <option value="sneakers">Кросовки</option>
@@ -166,8 +166,9 @@
 
         </ul> <button class="add__rpdact__btn button__hover" onclick="shoplistProdactAdd()">Показать еще</button>
       </div>
-    </section>
+    </div>
     <section class="basket center">
+      <h2 class="cab__title">Корзина</h2>
     </section>
     <section class="cabinet center">
       <h2 class="cab__title">Личный кабинет</h2>
