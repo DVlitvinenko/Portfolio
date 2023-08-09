@@ -12,6 +12,10 @@
 
 <body>
   <header class="top">
+    <input type="checkbox" id="navigationOpen" class="navigation__open__input">
+    <label for="navigationOpen" class="navigation__open__label">
+      <span class="nav__line"></span>
+    </label>
     <nav class="navigation center">
       <ul class="nav__list">
         <li class="nav__list__item">
@@ -27,7 +31,6 @@
           <a href="javascript:void(0)" class="nav__link link__hover" onclick="cabinet()">Личный кабинет</a>
         </li>
       </ul>
-      <div class="nav__line"></div>
     </nav>
     <section class="superprise center">
       <div class="scroll__left"></div>
@@ -76,6 +79,8 @@
     </section>
     <section class="shoping center">
       <div class="filters">
+        <input type="checkbox" class="form__hidden__input" id="formHiddenInput">
+        <label for="formHiddenInput" class="form__hidden__label button__hover">Фильтры</label>
         <form action="#" class="filters__form">
           <button class="filters__submit button__hover">Искать</button>
           <ul class="filters__list">
