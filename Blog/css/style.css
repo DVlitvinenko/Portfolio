@@ -531,9 +531,10 @@ a {
 .post__img {
   margin: 0 32px 16px 0;
   float: left;
-  max-width: 240px;
-  width: 100%;
-  height: auto;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .post__txt__wrap {}
@@ -927,11 +928,12 @@ a {
 @media(max-width:550px) {
 
   .post__img {
-    margin: 0 32px 16px 0;
+    margin: 0 20px 16px 0;
+    height: 100px;
   }
 }
 
-@media(max-width:380px) {
+@media(max-width:410px) {
   .general__post__article {
     height: 620px;
   }
@@ -945,6 +947,6 @@ a {
   }
 
   .post__img {
-    margin: 0 16px 8px 0;
+    margin: 0 14px 8px 0;
   }
 }

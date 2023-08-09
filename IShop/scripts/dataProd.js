@@ -2,9 +2,9 @@ const dataProd = [
   {
     'title': 'Ботинки зимние мужские',
     'price': '10000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod1.jpg',
     'size': 'XL',
-    'color': 'белый',
+    'color': 'Белый',
     'material': 'Кожа',
     'type': 'Ботинки',
     'articul': '00001'
@@ -12,9 +12,9 @@ const dataProd = [
   {
     'title': 'Ботинки зимние женские',
     'price': '12000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod2.jpg',
     'size': 'L',
-    'color': 'черный',
+    'color': 'Черный',
     'material': 'Кожа',
     'type': 'Ботинки',
     'articul': '00002'
@@ -22,7 +22,7 @@ const dataProd = [
   {
     'title': 'Ботинки зимние мужские',
     'price': '5000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod3.jpg',
     'size': 'XXL',
     'color': 'Зеленый',
     'material': 'Ткань',
@@ -32,7 +32,7 @@ const dataProd = [
   {
     'title': 'Ботинки зимние женские',
     'price': '1000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod4.jpg',
     'size': 'XS',
     'color': 'Красный',
     'material': 'Кожзам',
@@ -42,9 +42,9 @@ const dataProd = [
   {
     'title': 'Ботинки зимние мужские',
     'price': '10000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod5.jpg',
     'size': 'XL',
-    'color': 'белый',
+    'color': 'Белый',
     'material': 'Кожа',
     'type': 'Ботинки',
     'articul': '00005'
@@ -52,9 +52,9 @@ const dataProd = [
   {
     'title': 'Туфли мужские',
     'price': '20000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod6.jpg',
     'size': 'XL',
-    'color': 'белый',
+    'color': 'Белый',
     'material': 'Кожзам',
     'type': 'Туфли',
     'articul': '00006'
@@ -62,7 +62,7 @@ const dataProd = [
   {
     'title': 'Туфли женские',
     'price': '30000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod7.jpg',
     'size': 'L',
     'color': 'Розовый',
     'material': 'Кожа',
@@ -72,17 +72,17 @@ const dataProd = [
   {
     'title': 'Туфли мужские',
     'price': '40000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod8.jpg',
     'size': 'XS',
-    'color': 'белый',
-    'material': 'Черный',
+    'color': 'Черный',
+    'material': 'Кожзам',
     'type': 'Туфли',
     'articul': '00008'
   },
   {
     'title': 'Туфли мужские',
     'price': '1000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod9.jpg',
     'size': 'M',
     'color': 'Розовый',
     'material': 'Резина',
@@ -92,17 +92,17 @@ const dataProd = [
   {
     'title': 'Кросовки мужские',
     'price': '20000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod10.jpg',
     'size': 'XXL',
-    'color': 'белый',
-    'material': 'Черный',
+    'color': 'Белый',
+    'material': 'Кожа',
     'type': 'Кросовки',
     'articul': '00010'
   },
   {
     'title': 'Кросовки женские',
     'price': '10300',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod11.jpg',
     'size': 'S',
     'color': 'Розовый',
     'material': 'Кожа',
@@ -112,7 +112,7 @@ const dataProd = [
   {
     'title': 'Кросовки мужские легкие',
     'price': '1000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod12.jpg',
     'size': 'XXL',
     'color': 'Черный',
     'material': 'Резина',
@@ -122,7 +122,7 @@ const dataProd = [
   {
     'title': 'Кросовки мужские легкие',
     'price': '1200',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod13.jpg',
     'size': 'M',
     'color': 'Коричневый',
     'material': 'Кожа',
@@ -132,7 +132,7 @@ const dataProd = [
   {
     'title': 'Мокасины мужские',
     'price': '800',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod14.jpg',
     'size': 'XL',
     'color': 'Красный',
     'material': 'Ткань',
@@ -142,7 +142,7 @@ const dataProd = [
   {
     'title': 'Мокасины мужские',
     'price': '900',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod14.jpg',
     'size': 'XL',
     'color': 'Красный',
     'material': 'Ткань',
@@ -152,7 +152,7 @@ const dataProd = [
   {
     'title': 'Мокасины мужские',
     'price': '1000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod14.jpg',
     'size': 'XL',
     'color': 'Красный',
     'material': 'Ткань',
@@ -162,7 +162,7 @@ const dataProd = [
   {
     'title': 'Мокасины мужские',
     'price': '1100',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod14.jpg',
     'size': 'XL',
     'color': 'Красный',
     'material': 'Ткань',
@@ -172,7 +172,7 @@ const dataProd = [
   {
     'title': 'Мокасины мужские',
     'price': '1200',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod14.jpg',
     'size': 'L',
     'color': 'Красный',
     'material': 'Ткань',
@@ -182,7 +182,7 @@ const dataProd = [
   {
     'title': 'Мокасины мужские',
     'price': '1400',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod14.jpg',
     'size': 'XL',
     'color': 'Красный',
     'material': 'Ткань',
@@ -192,7 +192,7 @@ const dataProd = [
   {
     'title': 'Мокасины мужские',
     'price': '1500',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod14.jpg',
     'size': 'S',
     'color': 'Красный',
     'material': 'Ткань',
@@ -202,7 +202,7 @@ const dataProd = [
   {
     'title': 'Сапоги женские',
     'price': '70000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod15.jpg',
     'size': 'L',
     'color': 'Белый',
     'material': 'Кожа',
@@ -212,7 +212,7 @@ const dataProd = [
   {
     'title': 'Сапоги женские',
     'price': '70000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod16.jpg',
     'size': 'L',
     'color': 'Черный',
     'material': 'Кожа',
@@ -222,7 +222,7 @@ const dataProd = [
   {
     'title': 'Сапоги женские',
     'price': '70000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod17.jpg',
     'size': 'L',
     'color': 'Зеленый',
     'material': 'Кожа',
@@ -232,7 +232,7 @@ const dataProd = [
   {
     'title': 'Сапоги женские',
     'price': '70000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod18.jpg',
     'size': 'L',
     'color': 'Коричневый',
     'material': 'Кожа',
@@ -242,7 +242,7 @@ const dataProd = [
   {
     'title': 'Сапоги женские',
     'price': '70000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod19.jpg',
     'size': 'L',
     'color': 'Красный',
     'material': 'Кожа',
@@ -252,7 +252,7 @@ const dataProd = [
   {
     'title': 'Сапоги женские',
     'price': '70000',
-    'imgSrc': 'img/prodact__example.jpg',
+    'imgSrc': 'img/prod20.jpg',
     'size': 'L',
     'color': 'Розовый',
     'material': 'Кожа',

@@ -218,9 +218,13 @@ ul {
 
 .prodact__img {
   opacity: 0.8;
-  max-width: 240px;
+  max-width: 190px;
   width: 100%;
   height: auto;
+  border-radius: 4px;
+  transform: scale(-1, 1);
+  object-fit: cover;
+  object-position: center;
 }
 
 .prodact__price {
@@ -270,13 +274,48 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url(../img/prodact__example.jpg);
+  background: url(../img/prod3.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.7;
   border-radius: 4px;
   box-shadow: 3px 3px 2px 2px #00000085;
+}
+
+.cat__list__item:nth-child(2) {
+  background: url(../img/prod1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cat__list__item:nth-child(3) {
+  background: url(../img/prod7.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cat__list__item:nth-child(4) {
+  background: url(../img/prod11.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cat__list__item:nth-child(5) {
+  background: url(../img/prod14.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cat__list__item:nth-child(6) {
+  background: url(../img/prod18.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .cat__list__item:hover {
@@ -887,7 +926,8 @@ ul {
   }
 
   .prodact__img {
-    max-width: 200px;
+    max-width: 160px;
+    height: auto;
   }
 
   .prodact__price {
