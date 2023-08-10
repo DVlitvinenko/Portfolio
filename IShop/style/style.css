@@ -847,7 +847,7 @@ ul {
   padding: 0 8px;
   cursor: pointer;
   height: 32px;
-  width: 280px;
+  width: 370px;
   border: none;
   border-radius: 25px;
   pointer-events: auto;
@@ -1398,7 +1398,7 @@ ul {
   }
 
   .sort__select {
-    width: 235px;
+    width: 280px;
     font-size: 12px;
     position: absolute;
     top: 50px;

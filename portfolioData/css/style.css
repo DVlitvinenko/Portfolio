@@ -595,8 +595,8 @@ ul {
   5% {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
-    -webkit-box-shadow: 6px 6px 3px 3px #0C1622;
-    box-shadow: 6px 6px 3px 3px #0C1622;
+    -webkit-box-shadow: 15px 15px 10px 10px #0C1622;
+    box-shadow: 15px 15px 10px 10px #0C1622;
   }
 
   15% {
@@ -606,11 +606,11 @@ ul {
     box-shadow: 4px 4px 2px 2px #0C1622;
   }
 
-  30% {
+  45% {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
-    -webkit-box-shadow: 6px 6px 3px 3px #0C1622;
-    box-shadow: 6px 6px 3px 3px #0C1622;
+    -webkit-box-shadow: 15px 15px 10px 10px #0C1622;
+    box-shadow: 15px 15px 10px 10px #0C1622;
   }
 
   to {

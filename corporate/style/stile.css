@@ -271,7 +271,7 @@ a {
   margin: 0 32px 16px 0;
 }
 
-.txt {
+.about__txt {
   margin: 0 0 128px 0;
 }
 
@@ -279,7 +279,7 @@ a {
   box-sizing: border-box;
 }
 
-.history_title {
+.history__title {
   padding: 0 120px 0 0;
   font-size: 42px;
   font-weight: 700;
@@ -690,7 +690,7 @@ a {
     font-size: 20px;
   }
 
-  .history_title,
+  .history__title,
   .promo__title,
   .plans__title,
   .start__title,
@@ -707,11 +707,12 @@ a {
     margin: 0 0 16px 0;
   }
 
-  .txt,
+  .abou__txt,
   .history__txt,
   .plans__txt {
     margin: 0 0 64px 0;
     font-size: 18px;
+    white-space: pre-wrap;
   }
 
   .prodact__txt,
