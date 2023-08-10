@@ -4,11 +4,11 @@ html {
 }
 
 body {
-  margin: 0
+  margin: 0;
 }
 
 main {
-  display: block
+  display: block;
 }
 
 h1 {
@@ -191,6 +191,9 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 ul {
@@ -403,6 +406,8 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(174, 0, 255, 0.5)), to(rgba(255, 192, 203, 0.5)));
   background: -o-linear-gradient(rgba(174, 0, 255, 0.5), rgba(255, 192, 203, 0.5));
   background: linear-gradient(rgba(174, 0, 255, 0.5), rgba(255, 192, 203, 0.5));
+  padding: 0 0 64px 0;
+  flex-grow: 1;
 }
 
 .blog__wrap {}
@@ -851,6 +856,7 @@ a {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 192, 203, 0.5)), to(rgba(234, 0, 255, 0.5)));
   background: -o-linear-gradient(rgba(255, 192, 203, 0.5), rgba(234, 0, 255, 0.5));
   background: linear-gradient(rgba(255, 192, 203, 0.5), rgba(234, 0, 255, 0.5));
+  flex-shrink: 0;
 }
 
 .bottom__wrap {

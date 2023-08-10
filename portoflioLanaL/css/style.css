@@ -193,7 +193,10 @@ a {
 
 body {
   font-family: sans-serif;
-  font-size: 25px
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .center {
@@ -216,6 +219,11 @@ body {
 
 .navbar-text {
   color: #000
+}
+
+.main {
+  flex-grow: 1;
+  background-color: #cac59f;
 }
 
 .about__aside__wrap {
@@ -280,7 +288,7 @@ body {
   justify-content: flex-start;
   gap: 25px;
   padding: 0 10px 30px;
-  background-color: #cac59f
+  background-color: #cac59f;
 }
 
 .examples {
@@ -334,8 +342,10 @@ body {
 }
 
 .bottom {
+  max-height: 64px;
   padding: 10px;
-  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity))
+  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
+  flex-shrink: 0;
 }
 
 .bottom__wrap {

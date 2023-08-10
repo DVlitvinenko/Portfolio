@@ -192,6 +192,9 @@ body {
   font-size: 20px;
   font-weight: 400;
   color: #0C1622;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 ul {
@@ -273,7 +276,10 @@ ul {
   color: #0C1622;
 }
 
-.main {}
+.main {
+  flex-grow: 1;
+  background-color: #83A3CB;
+}
 
 .about {
   background-color: #83A3CB;
@@ -395,6 +401,7 @@ ul {
 .bottom {
   background-color: #4985C8;
   padding: 32px 0;
+  flex-shrink: 0;
 }
 
 .bottom__wrap {
