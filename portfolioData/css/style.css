@@ -450,8 +450,8 @@ ul {
   .menu__list {
     display: -ms-grid;
     display: grid;
-    gap: 12px;
-    -ms-grid-columns: 1fr 12px 1fr;
+    gap: 14spx;
+    -ms-grid-columns: 1fr 14spx 1fr;
     grid-template-columns: repeat(2, 1fr);
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -517,8 +517,8 @@ ul {
 }
 
 .puls1 {
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+  -webkit-animation-duration: 14s;
+  animation-duration: 14s;
   -webkit-animation-name: pulsation;
   animation-name: pulsation;
   -webkit-animation-delay: 3.5s;
@@ -528,8 +528,8 @@ ul {
 }
 
 .puls2 {
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+  -webkit-animation-duration: 14s;
+  animation-duration: 14s;
   -webkit-animation-name: pulsation;
   animation-name: pulsation;
   -webkit-animation-delay: 4.5s;
@@ -539,8 +539,8 @@ ul {
 }
 
 .puls3 {
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+  -webkit-animation-duration: 14s;
+  animation-duration: 14s;
   -webkit-animation-name: pulsation;
   animation-name: pulsation;
   -webkit-animation-delay: 5.5s;
@@ -550,12 +550,45 @@ ul {
 }
 
 .puls4 {
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+  -webkit-animation-duration: 14s;
+  animation-duration: 14s;
   -webkit-animation-name: pulsation;
   animation-name: pulsation;
   -webkit-animation-delay: 6.5s;
   animation-delay: 6.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.puls5 {
+  -webkit-animation-duration: 14s;
+  animation-duration: 14s;
+  -webkit-animation-name: pulsation;
+  animation-name: pulsation;
+  -webkit-animation-delay: 7.5s;
+  animation-delay: 7.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.puls6 {
+  -webkit-animation-duration: 14s;
+  animation-duration: 14s;
+  -webkit-animation-name: pulsation;
+  animation-name: pulsation;
+  -webkit-animation-delay: 8.5s;
+  animation-delay: 8.5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.puls7 {
+  -webkit-animation-duration: 14s;
+  animation-duration: 14s;
+  -webkit-animation-name: pulsation;
+  animation-name: pulsation;
+  -webkit-animation-delay: 9.5s;
+  animation-delay: 9.5s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
