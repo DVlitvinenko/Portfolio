@@ -84,13 +84,13 @@ const basketForming = () => {
   </p>
 </div>
 <button class="basket__clear__btn button__hover">Очистить корзину</button>
-<form action="#" class="buy__form">
+<form action="mail.php" class="buy__form">
   <span class="buy__txt">Ваш заказ на:
     <span class="basket__summ__value"></span>р
   </span>
   <span class="buy__txt">Количество товаров: <span class="basket__summ__items__value"></span>шт</span>
-  <input type="tel" class="buy__phone__number" placeholder="телефон">
-  <input type="email" class="buy__email" placeholder="почта">
+  <input type="tel" name='phone' class="buy__phone__number" placeholder="телефон">
+  <input type="email" name='email' class="buy__email" placeholder="почта">
   <button class="buy__btn button__hover">Заказать</button>
 </form>`;
   const busketListEls = document.querySelector('.basket__prod__list');
